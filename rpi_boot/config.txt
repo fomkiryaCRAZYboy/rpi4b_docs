@@ -1,0 +1,12 @@
+# Основные настройки
+arm_64bit=1
+enable_uart=1
+kernel=kernel8.img
+
+# Настройки UART (важно для bare-metal)
+init_uart_clock=48000000
+core_freq_min=500
+
+# Отключение графики (опционально)
+disable_commandline_tags=1
+disable_overscan=1

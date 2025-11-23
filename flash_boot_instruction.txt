@@ -1,0 +1,10 @@
+1) Identify your SD card and format it. (check formatting instructions: formatting_card.txt).
+2) Mount the partition created on the card and copy the firmware files there from rpi_boot directory.
+3) Build the kernel (go to the directory uart_rpi4b and run 'make'). Copy bin/kernel8.img to your SD card.
+4) Remove the card from PC and insert it into Raspberry Pi.
+5) Connect the UART adapter to the Raspberry Pi and PC. (check pinout image).
+6) Identify serial port file: run 'ls /dev/ttyUSB*'.
+7) Grant the file the necessary permissions: 'sudo chmod +x /dev/ttyUSBx'.
+8) Run 'sudo minicom -s' and go to serial port settings. Set 'serial port': /dev/ttyUSBx, 'speed/parity/bits' : 115200 8N1.
+   Save configuration as default. Press exit.
+9) Connect power to the Raspberry pi.
